@@ -11,5 +11,7 @@ test('renders learn react link', () => {
     </Provider>,
   );
 
-  expect(screen.getByPlaceholderText('Type your comment')).toBeInTheDocument();
+  expect(
+    screen.getByPlaceholderText('Type your comment...'),
+  ).toBeInTheDocument();
 });

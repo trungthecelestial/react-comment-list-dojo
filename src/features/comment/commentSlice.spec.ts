@@ -7,6 +7,7 @@ import commentReducer, {
 describe('comment reducer', () => {
   const initialState: CommentState = {
     isLoading: false,
+    error: null,
     commentList: [],
   };
 

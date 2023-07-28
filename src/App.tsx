@@ -10,12 +10,13 @@ import {
 function App() {
   const dispatch = useAppDispatch();
   const commentList = useAppSelector(selectCommentList);
+  console.log(commentList);
 
   const [comment, setComment] = useState('');
 
-  // useEffect(() => {
-  //   dispatch(getCommentList());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getCommentList());
+  }, [dispatch]);
 
   return (
     <div className="min-h-screen w-screen bg-black text-white flex flex-col p-4">
@@ -36,7 +37,7 @@ function App() {
       <div className="mt-auto">
         <input
           className="w-full px-4 py-2 text-black"
-          placeholder="Type your comment"
+          placeholder="Type your comment..."
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           onKeyDown={(event) => {
